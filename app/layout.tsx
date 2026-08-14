@@ -22,8 +22,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Terreau",
-  description: "Un sol fertile pour vos projets."
+  title: "Terreau — Un sol fertile pour les actions collectives",
+  description:
+    "La planète n'a pas besoin que quelques personnes fassent tout. Elle a besoin que des millions de personnes fassent quelque chose. Terreau est une plateforme gratuite pour agir, construire, inventer et transmettre."
 };
 
 export default function RootLayout({
