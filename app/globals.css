@@ -21,8 +21,9 @@ body {
   min-height: 100vh;
   color: var(--foreground);
   background:
-    radial-gradient(circle at top left, rgba(201, 122, 61, 0.07), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(87, 105, 74, 0.09), transparent 34%),
+    radial-gradient(circle at top left, rgba(201, 122, 61, 0.08), transparent 30%),
+    radial-gradient(circle at 85% 20%, rgba(87, 105, 74, 0.07), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(138, 74, 59, 0.05), transparent 35%),
     var(--background);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,11 +36,71 @@ a {
 }
 
 ::selection {
-  background: rgba(87, 105, 74, 0.25);
+  background: rgba(87, 105, 74, 0.22);
   color: #26201A;
 }
 
 .bg-soil-grain {
-  background-image: radial-gradient(circle at 1px 1px, rgba(38, 32, 26, 0.07) 1px, transparent 0);
-  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 1px 1px, rgba(38, 32, 26, 0.06) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.92; }
+}
+
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.35s; }
+.animate-delay-4 { animation-delay: 0.5s; }
+.animate-delay-5 { animation-delay: 0.65s; }
+
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -12px rgba(38, 32, 26, 0.18);
+}
+
+.line-grow {
+  transform-origin: left;
+  animation: drawLine 0.9s ease-out 0.4s both;
+}
+
+/* Form focus ring */
+.input-premium:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(251, 247, 238, 0.35);
 }
