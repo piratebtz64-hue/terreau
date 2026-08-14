@@ -7,11 +7,17 @@ export default function Header() {
         <Link href="/" className="font-display text-xl font-semibold tracking-tight sm:text-2xl">
           Terreau
         </Link>
-        <nav className="flex items-center gap-3 sm:gap-6">
-          <Link href="/" className="hidden text-sm text-moss-dark transition hover:text-humus sm:inline">
-            Explorer
+        <nav className="flex items-center gap-2 sm:gap-5">
+          <Link
+            href="/enfants"
+            className="rounded-full bg-clay/10 px-3 py-1.5 font-mono text-xs text-clay transition hover:bg-clay/20 sm:px-4 sm:text-sm"
+          >
+            🌿 Enfants
           </Link>
-          <Link href="/publier" className="rounded-full bg-moss px-5 py-2.5 font-mono text-sm text-bone transition hover:bg-moss-dark">
+          <Link
+            href="/publier"
+            className="rounded-full bg-moss px-4 py-2 font-mono text-xs text-bone transition hover:bg-moss-dark sm:px-5 sm:text-sm"
+          >
             Publier
           </Link>
         </nav>
