@@ -31,13 +31,15 @@ export default function HomePage() {
               Une idée qui se propage
             </p>
 
-            <h1 className="font-display text-4xl leading-[1.05] tracking-tight text-humus sm:text-6xl lg:text-7xl">
-              La planète n&apos;a pas besoin<br className="hidden sm:block" />
-              que quelques personnes<br className="hidden sm:block" />
+            <h1 className="font-display text-4xl leading-[1.08] tracking-tight text-humus sm:text-6xl lg:text-7xl">
+              La planète n&apos;a pas besoin{' '}
+              <br className="hidden sm:block" />
+              que quelques personnes{' '}
+              <br className="hidden sm:block" />
               fassent tout.
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-moss-dark sm:text-xl">
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-moss-dark sm:mt-8 sm:text-xl">
               Elle a besoin que des millions de personnes fassent quelque chose.
             </p>
 
