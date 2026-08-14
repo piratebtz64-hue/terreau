@@ -2,15 +2,18 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-soil-grain text-humus">
       {/* ─── Header ─── */}
-      <header className="sticky top-0 z-50 border-b border-humus/10 bg-parchment/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-humus/10 bg-parchment/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
           <a href="/" className="font-display text-xl font-semibold tracking-tight sm:text-2xl">
             Terreau
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium text-moss-dark sm:flex">
-            <a href="#gestes" className="transition hover:text-humus">Les 4 gestes</a>
-            <a href="#comment" className="transition hover:text-humus">Comment ça marche</a>
-            <a href="#inscription" className="rounded-full bg-moss px-5 py-2 text-bone transition hover:bg-moss-dark">
+            <a href="#gestes" className="transition-colors hover:text-humus">Les 4 gestes</a>
+            <a href="#comment" className="transition-colors hover:text-humus">Comment ça marche</a>
+            <a
+              href="#inscription"
+              className="rounded-full bg-moss px-5 py-2.5 text-bone transition hover:bg-moss-dark"
+            >
               Être prévenu
             </a>
           </nav>
@@ -27,32 +30,32 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-6 pb-20 pt-16 sm:px-10 sm:pb-28 sm:pt-24 lg:pt-28">
           <div className="max-w-3xl">
-            <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.28em] text-clay">
+            <p className="mb-6 animate-fade-up font-mono text-[11px] uppercase tracking-[0.28em] text-clay">
               Une idée qui se propage
             </p>
 
-            <h1 className="font-display text-4xl leading-[1.08] tracking-tight text-humus sm:text-6xl lg:text-7xl">
-              La planète n&apos;a pas besoin{' '}
+            <h1 className="animate-fade-up animate-delay-1 font-display text-4xl leading-[1.08] tracking-tight text-humus sm:text-6xl lg:text-7xl">
+              La planète n&apos;a pas besoin{" "}
               <br className="hidden sm:block" />
-              que quelques personnes{' '}
+              que quelques personnes{" "}
               <br className="hidden sm:block" />
               fassent tout.
             </h1>
 
-            <p className="mt-7 max-w-xl text-lg leading-relaxed text-moss-dark sm:mt-8 sm:text-xl">
+            <p className="mt-7 animate-fade-up animate-delay-2 max-w-xl text-lg leading-relaxed text-moss-dark sm:mt-8 sm:text-xl">
               Elle a besoin que des millions de personnes fassent quelque chose.
             </p>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-humus/80">
+            <p className="mt-6 animate-fade-up animate-delay-3 max-w-xl text-base leading-relaxed text-humus/80">
               Terreau est une plateforme gratuite où chacun peut agir concrètement
               pour la planète — réparer, construire, inventer, transmettre —
               et voir son idée se propager.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-10 flex animate-fade-up animate-delay-4 flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href="#inscription"
-                className="inline-flex w-fit items-center justify-center rounded-full bg-moss px-7 py-3.5 font-mono text-sm text-bone transition hover:bg-moss-dark"
+                className="inline-flex w-fit items-center justify-center rounded-full bg-moss px-7 py-3.5 font-mono text-sm text-bone shadow-sm transition hover:bg-moss-dark hover:shadow-md"
               >
                 Être prévenu du lancement
               </a>
@@ -61,39 +64,39 @@ export default function HomePage() {
                 className="inline-flex w-fit items-center gap-2 font-mono text-sm text-moss-dark transition hover:text-humus"
               >
                 Découvrir les 4 gestes
-                <span aria-hidden>↓</span>
+                <span aria-hidden className="text-base">↓</span>
               </a>
             </div>
           </div>
 
           {/* Propagation visual */}
-          <div className="mt-20 sm:mt-28">
+          <div className="mt-20 animate-fade-up animate-delay-5 sm:mt-28">
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               {["Idée", "Reproduite", "Améliorée", "Transmise"].map((step, i) => (
                 <div key={step} className="flex items-center gap-3 sm:gap-4">
                   <div className="flex flex-col items-center">
                     <div
-                      className={`flex h-12 w-12 items-center justify-center rounded-full border-2 font-mono text-xs font-medium sm:h-14 sm:w-14 sm:text-sm ${
+                      className={`flex h-12 w-12 items-center justify-center rounded-full border-2 font-mono text-xs font-medium transition sm:h-14 sm:w-14 sm:text-sm ${
                         i === 0
                           ? "border-clay bg-clay/10 text-clay"
                           : i === 3
-                          ? "border-moss bg-moss text-bone"
-                          : "border-humus/20 bg-bone text-humus"
+                          ? "border-moss bg-moss text-bone shadow-sm"
+                          : "border-humus/15 bg-bone text-humus"
                       }`}
                     >
                       {i + 1}
                     </div>
-                    <span className="mt-2 font-mono text-[10px] uppercase tracking-wider text-moss-dark sm:text-[11px]">
+                    <span className="mt-2.5 font-mono text-[10px] uppercase tracking-wider text-moss-dark sm:text-[11px]">
                       {step}
                     </span>
                   </div>
                   {i < 3 && (
-                    <div className="hidden h-px w-8 bg-humus/20 sm:block sm:w-12 md:w-16" />
+                    <div className="hidden h-px w-8 bg-humus/15 sm:block sm:w-12 md:w-16" />
                   )}
                 </div>
               ))}
             </div>
-            <p className="mt-6 max-w-lg font-mono text-xs leading-relaxed text-humus/60">
+            <p className="mt-7 max-w-lg font-mono text-xs leading-relaxed text-humus/55">
               Une action simple documentée → reprise par quelqu&apos;un d&apos;autre →
               améliorée → transmise à nouveau. C&apos;est ainsi qu&apos;une idée devient un mouvement.
             </p>
@@ -102,13 +105,13 @@ export default function HomePage() {
       </section>
 
       {/* ─── Manifeste ─── */}
-      <section className="border-y border-humus/10 bg-bone/60">
+      <section className="border-y border-humus/10 bg-bone/50">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.28em] text-clay">
               Manifeste
             </p>
-            <blockquote className="font-display text-2xl leading-snug tracking-tight text-humus sm:text-3xl lg:text-4xl">
+            <blockquote className="font-display text-2xl leading-snug tracking-tight text-humus sm:text-3xl lg:text-[2.6rem] lg:leading-[1.15]">
               « La planète n&apos;a pas besoin que quelques personnes fassent tout.
               Elle a besoin que des millions de personnes fassent quelque chose. »
             </blockquote>
@@ -136,7 +139,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 num: "01",
@@ -161,7 +164,7 @@ export default function HomePage() {
             ].map((g) => (
               <div
                 key={g.num}
-                className="group rounded-2xl border border-humus/10 bg-bone/50 p-6 transition hover:border-moss/30 hover:bg-bone"
+                className="hover-lift group rounded-2xl border border-humus/10 bg-bone/60 p-6 transition hover:border-moss/25 hover:bg-bone"
               >
                 <span className="font-mono text-xs text-clay">{g.num}</span>
                 <h3 className="mt-3 font-display text-xl tracking-tight">{g.title}</h3>
@@ -214,8 +217,8 @@ export default function HomePage() {
             ].map((item, idx) => (
               <div
                 key={item.step}
-                className={`flex gap-6 border-l-2 py-8 pl-6 sm:gap-10 sm:pl-10 ${
-                  idx === 4 ? "border-moss" : "border-humus/15"
+                className={`flex gap-6 border-l-2 py-8 pl-6 transition-colors sm:gap-10 sm:pl-10 ${
+                  idx === 4 ? "border-moss" : "border-humus/12 hover:border-moss/40"
                 }`}
               >
                 <span className="font-mono text-sm text-clay">{item.step}</span>
@@ -234,8 +237,8 @@ export default function HomePage() {
       {/* ─── Accessibilité ─── */}
       <section className="border-t border-humus/10">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div className="rounded-2xl border border-humus/10 bg-bone/50 p-8 sm:p-10">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="hover-lift rounded-2xl border border-humus/10 bg-bone/60 p-8 sm:p-10">
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-clay">
                 Accessible à tous
               </p>
@@ -249,7 +252,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-humus/10 bg-bone/50 p-8 sm:p-10">
+            <div className="hover-lift rounded-2xl border border-humus/10 bg-bone/60 p-8 sm:p-10">
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-clay">
                 Entraide discrète
               </p>
@@ -264,7 +267,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-dashed border-humus/20 bg-parchment/50 p-8 text-center sm:p-10">
+          <div className="mt-10 rounded-2xl border border-dashed border-humus/20 bg-parchment/60 p-8 text-center sm:p-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-moss">
               Règles du site
             </p>
@@ -293,8 +296,8 @@ export default function HomePage() {
       {/* ─── Inscription ─── */}
       <section id="inscription" className="scroll-mt-20 border-t border-humus/10 bg-moss text-bone">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
-          <div className="mx-auto max-w-xl text-center">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.28em] text-bone/70">
+          <div className="mx-auto max-w-lg text-center">
+            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.28em] text-bone/65">
               Lancement bientôt
             </p>
             <h2 className="font-display text-3xl tracking-tight sm:text-4xl">
@@ -309,35 +312,37 @@ export default function HomePage() {
               action="mailto:bonjour@terreau.fr"
               method="post"
               encType="text/plain"
-              className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center"
+              className="mt-10"
             >
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="votre@email.com"
-                className="w-full rounded-full border-0 bg-bone/15 px-6 py-3.5 text-sm text-bone placeholder:text-bone/50 focus:outline-none focus:ring-2 focus:ring-bone/40 sm:max-w-xs"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-bone px-7 py-3.5 font-mono text-sm text-humus transition hover:bg-parchment"
-              >
-                Me prévenir
-              </button>
+              <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="votre@email.com"
+                  className="input-premium w-full rounded-full border-0 bg-bone/15 px-6 py-3.5 text-sm text-bone placeholder:text-bone/45 sm:max-w-[260px]"
+                />
+                <button
+                  type="submit"
+                  className="rounded-full bg-bone px-8 py-3.5 font-mono text-sm font-medium text-humus transition hover:bg-parchment active:scale-[0.98]"
+                >
+                  Me prévenir
+                </button>
+              </div>
+              <p className="mt-5 font-mono text-[11px] leading-relaxed text-bone/45">
+                Un seul email de lancement. Vous pouvez vous désinscrire à tout moment.
+              </p>
             </form>
-            <p className="mt-5 font-mono text-[11px] text-bone/50">
-              En vous inscrivant, vous acceptez de recevoir un seul email de lancement.
-            </p>
           </div>
         </div>
       </section>
 
       {/* ─── Footer ─── */}
-      <footer className="border-t border-humus/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+      <footer className="border-t border-humus/10 bg-parchment/30">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <div>
             <span className="font-display text-lg font-semibold">Terreau</span>
-            <p className="mt-1 font-mono text-xs text-moss">
+            <p className="mt-1.5 font-mono text-xs text-moss">
               Un sol fertile pour les actions collectives
             </p>
           </div>
